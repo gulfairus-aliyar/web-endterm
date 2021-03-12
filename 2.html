@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://images.pexels.com/photos/3038552/pexels-photo-3038552.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            font-family: Century Gothic;
+        }
+
+        .box {
+            width: 320px;
+            height: 380px;
+            background-color: #000000b3;
+            color: #fff;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            padding: 70px 30px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 50px);
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .box input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        
+            .box input[type="submit"] {
+                border: none;
+                outline: none;
+                height: 40px;
+                background-color: deeppink;
+                color: #fff;
+                font-size: 18px;
+                border-radius: 20px;
+                transition: 0.4s ease;
+            }
+
+                .box input[type="submit"]:hover {
+                    cursor: pointer;
+                    background-color: #ffc107;
+                    color: #000;
+                }
+
+        .box a {
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 20px;
+            color: darkgrey;
+            transition: 0.4s ease;
+        }
+
+            .box a:hover {
+                color: deeppink;
+            }
+
+        .nav-bar {
+            display: flex;
+            padding: 40px 120px;
+        }
+
+        .nav-logo img {
+            width: 135px;
+        }
+
+        .nav-links {
+            flex: 1;
+        }
+
+            .nav-links ul {
+                margin-left: 50px;
+                display: inline;
+            }
+
+                .nav-links ul li {
+                    list-style: none;
+                    display: inline-block;
+                    padding: 8px 25px;
+                }
+
+                .nav-links ul a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 13px;
+                }
+
+                .nav-links ul li::after {
+                    content: ' ';
+                    width: 0;
+                    height: 2px;
+                    background: deeppink;
+                    display: block;
+                    margin: auto;
+                    transition: .5s;
+                }
+
+                .nav-links ul li:hover::after {
+                    width: 100%;
+                }
+
+                .emailText,
+                .passText{
+    display: block;
+    font-weight: 300;
+    font-style: italic;
+    padding: 5px;
+}
+label.valid .emailText,
+label.valid .passText{
+    color: #00ff00;
+}
+label.invalid .emailText,
+label.invalid .passText{
+    color: #f00;
+}
+label.valid::before,
+label.invalid::before{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 18px;
+    right: 5px;
+    z-index: 100;
+}
+    </style>
+    <div class="nav-bar>">
+        <div class="nav-logo">
+            <img src="">
+        </div>
+        <div class="nav-links" id="nav-links">
+
+
+            <ul>
+                <li><a href="1.html">HOME</a></li>
+                <li><a href="3.1.html">ABOUT US</a></li>
+                <li><a href="3.2.html">CONTACT</a></li>
+                <li><a href="3.html">SEARCH</a></li>
+                <li><a href="4.html">COUNTRIES</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="box">
+        <img src="icon.png" class="icon" />
+        <h1>Login here</h1>
+        <form>
+            <label class="emailBox">
+                <input type="email" id="email" name="" placeholder="Enter Email" />
+                <span class="emailText"></span>
+            </label>
+
+            <label class="passBox">
+                <input type="password" id="password" name="" placeholder="Enter Password" />
+                <span class="passText"></span>
+            </label>
+            <input type="submit" name="login" value="Login" />
+            <a href="#">Forgot Password</a>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        
+       const email = document.getElementById("email");
+       const password = document.getElementById("password");
+
+    email.addEventListener('input',()=>{
+      const emailBox = document.querySelector('.emailBox');
+      const emailText = document.querySelector('.emailText');
+      const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
+
+      if(email.value.match(emailPattern)){
+        emailBox.classList.add('valid');
+        emailBox.classList.remove('invalid');
+        emailText.innerHTML = "Your Email Address in Valid"; 
+      }else{
+        emailBox.classList.add('invalid');
+        emailBox.classList.remove('valid');
+        emailText.innerHTML = "Must be a valid email address."; 
+      }
+    });
+
+    password.addEventListener('input',()=>{
+      const passBox = document.querySelector('.passBox');
+      const passText = document.querySelector('.passText');
+      const passPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+
+      if(password.value.match(passPattern)){
+        passBox.classList.add('valid');
+        passBox.classList.remove('invalid');
+        passText.innerHTML = "Your Password in Valid"; 
+      }else{
+        passBox.classList.add('invalid');
+        passBox.classList.remove('valid');
+        passText.innerHTML = "Your password must be at least 8 characters as well as contain at least one uppercase, one lowercase, and one number."; 
+      }
+    });
+    </script>
+</body>
+</html>

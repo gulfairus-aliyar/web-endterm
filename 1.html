@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        html, body {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            justify-items: center;
+            background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://images.pexels.com/photos/3596713/pexels-photo-3596713.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+        }
+
+
+        .hero {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://images.pexels.com/photos/3596713/pexels-photo-3596713.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+            background-size: cover;
+            background-position: center;
+            text-decoration: none;
+        }
+
+        .nav-bar {
+            display: flex;
+            padding: 40px 120px;
+        }
+
+        .nav-logo img {
+            width: 135px;
+        }
+
+        .nav-links ul {
+            text-decoration: none;
+            display: inline;
+        }
+
+            .nav-links ul li {
+                list-style: none;
+                display: inline-block;
+                padding: 8px 25px;
+            }
+
+            .nav-links ul a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 13px;
+            }
+
+            .nav-links ul li::after {
+                content: ' ';
+                width: 0;
+                height: 2px;
+                background: deeppink;
+                display: block;
+                margin: auto;
+                transition: .5s;
+            }
+
+            .nav-links ul li:hover::after {
+                width: 100%;
+            }
+
+        .btn {
+            padding: 10px 20px;
+            border: 0;
+            background: deeppink;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .nav-links .btn {
+            float: right;
+        }
+
+        .banner-title {
+            margin: 80px 130px;
+            color: #fff;
+        }
+
+            .banner-title h2 {
+                font-size: 64px;
+                margin-bottom: 30px;
+            }
+
+                .banner-title h2 span {
+                    color: deeppink;
+                }
+
+        .s {
+            text-decoration: none;
+            color: black;
+        }
+
+        .wrapper .button {
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            float: left;
+            margin: 0 5px;
+            overflow: hidden;
+            background: white;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-out;
+        }
+
+            .wrapper .button:hover {
+                width: 200px;
+            }
+
+            .wrapper .button .icon {
+                display: inline-block;
+                height: 60px;
+                width: 60px;
+                text-align: center;
+                border-radius: 50px;
+                box-sizing: border-box;
+                line-height: 60px;
+                transition: all 0.3s ease-out;
+            }
+
+            .wrapper .button:nth-child(1):hover .icon {
+                background: #4267B2;
+            }
+
+            .wrapper .button:nth-child(2):hover .icon {
+                background: #E1306C;
+            }
+
+            .wrapper .button:nth-child(3):hover .icon {
+                background: #1DA1F2;
+            }
+
+            .wrapper .button:nth-child(4):hover .icon {
+                background: #ff0000;
+            }
+
+            .wrapper .button:nth-child(5):hover .icon {
+                background: #ff0000;
+            }
+
+            .wrapper .button .icon i {
+                font-size: 25px;
+                line-height: 60px;
+                transition: all 0.3s ease-out;
+            }
+
+            .wrapper .button:hover .icon i {
+                color: white;
+            }
+
+            .wrapper .button span {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 60px;
+                margin-left: 10px;
+                transition: all 0.3s ease-out;
+            }
+
+            .wrapper .button:nth-child(1):hover span {
+                color: #4267B2;
+            }
+
+            .wrapper .button:nth-child(2):hover span {
+                color: #E1306C;
+            }
+
+            .wrapper .button:nth-child(3):hover span {
+                color: #1DA1F2;
+            }
+
+            .wrapper .button:nth-child(4):hover span {
+                color: #ff0000;
+            }
+
+            .wrapper .button:nth-child(5):hover span {
+                color: #ff0000;
+            }
+    </style>
+
+    <div class="hero">
+        <div class="nav-bar>">
+            <div class="nav-logo">
+                <img src="">
+            </div>
+            <div class="nav-links" id="nav-links">
+
+                <ul>
+                    <li><a href="1.html">HOME</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="3.2.html">CONTACT</a></li>
+                    <li><a href="">SEARCH</a></li>
+                    <li><a href="">COUNTRIES</a></li>
+                </ul>
+                <button type="button" class="btn">
+                    <a class="s" href="2.html">LOG IN</a>
+                </button>
+            </div>
+
+        </div>
+        <div class="banner-title">
+            <h2><span>To awaken alone in a strange town is one </span> of the pleasantest sensations in the world</h2>
+            <button type="button" class="btn">
+                EXPLORE
+            </button>
+        </div>
+        <div class="wrapper">
+            <div class="button">
+                <div class="icon"><i class="fa fa-facebook"></i></div>
+                <span>Facebook</span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa fa-instagram"></i></div>
+                <span>Instagram</span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa fa-twitter"></i></div>
+                <span>Twitter</span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa fa-pinterest"></i></div>
+                <span>Pinterest</span>
+            </div>
+            <div class="button">
+                <div class="icon"><i class="fa fa-youtube"></i></div>
+                <span>Youtube</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
